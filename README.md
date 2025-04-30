@@ -29,12 +29,13 @@ PCF File on GitHub
 
 Pin Assignments:
 
-Signal	FPGA Pin
-led_red	39
-led_blue	40
-led_green	41
-hw_clk	20
-testwire	17
+| Signal       | FPGA Pin |
+|------------  |----------|
+| `led_red`    | 39       |
+| `led_blue`   | 40       |
+| `led_green`  | 41       |
+| `hw_clk`     | 20       |
+| `testwire`   | 17       |
 These pins correspond to the RGB LED and oscillator clock input as per the VSDSquadron FPGA Mini board's datasheet.
 
 🛠 Step 3: Toolchain and Flashing
