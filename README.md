@@ -22,7 +22,9 @@ To understand, document, and implement the Verilog code that drives the blue LED
 
 ### LED logic
 
-\`\`\`verilog assign led_blue = counter\[25\]; // Blinks blue LED based on MSB assign led_red = 0; assign led_green = 0; Only the blue LED blinks. Red and green are off.
+\`\`\`verilog assign led_blue = counter\[25\]; // Blinks blue LED based on MSB 
+assign led_red = 0; 
+assign led_green = 0; Only the blue LED blinks. Red and green are off.
 
 📁 Step 2: PCF File and Pin Mapping GitHub Link to PCF File: PCF File on GitHub
 
@@ -38,15 +40,12 @@ Pin Assignments:
 
 These pins correspond to the RGB LED and oscillator clock input as per the VSDSquadron FPGA Mini board’s datasheet.
 
-🛠 Step 3: Toolchain and Flashing Required Tools Installed: yosys: Synthesizes the Verilog code.
-
-nextpnr-ice40: Places and routes design.
-
-icepack, icetime: Converts to binary and checks timing.
-
-iceprog: Flashes .bin file to the FPGA board.
-
-Build & Flash Commands: bash Copy Edit make clean make build sudo make flash Outcome: Blue LED blinks visibly.
+🛠 Step 3: Toolchain and Flashing Required Tools Installed: 
+     yosys: Synthesizes the Verilog code.
+    nextpnr-ice40: Places and routes design.
+    icepack, icetime: Converts to binary and checks timing.
+    iceprog: Flashes .bin file to the FPGA board.
+    Build & Flash Commands: bash Copy Edit make clean make build sudo make flash Outcome: Blue LED blinks visibly.
 
 Timing report: 6.29 ns (159.10 MHz estimate).
 
@@ -58,14 +57,13 @@ The FPGA internal oscillator was successfully utilized without requiring externa
 
 testwire can be used for debugging or scope probing.
 
-📂 Final Files top.v: Verilog source file.
-
+📂 Final Files 
+top.v: Verilog source file.
 VSDSquadronFM.pcf: Physical constraints file.
-
 Makefile: Build and flashing automation.
 
-📬 Contact Information Author: Vinay Subramanya CK
-
+📬 Contact Information 
+Author: Vinay Subramanya CK
 Email: <wompert08@gmail.com>
 
 📝 License This project is licensed under the MIT License - see the LICENSE file for details.
