@@ -1,55 +1,86 @@
-# FPGA Task 1 - LED Blue Project
+# 🔧 Verilog Implementation Report: Blue LED Blinking on VSDSquadron FPGA Mini
 
-## Project Overview
+## 📌 Objective
+To understand, document, and implement the Verilog code that drives the blue LED on the VSDSquadron FPGA Mini using the internal oscillator, a frequency counter, and appropriate pin mappings via the PCF file.
 
-This project demonstrates the development of a basic **LED control system** using the **VSDSquadron FPGA Mini** board. The project aims to control an LED using Verilog code and integrate it into an FPGA-based workflow. It showcases how Verilog programming can interact with hardware to drive outputs on an FPGA.
+## 🔍 Step 1: Understanding the Verilog Code
+**GitHub Link to Code**:  
+[Verilog Code on GitHub](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/top.v)
 
-## Folder Structure
+### Module Ports:
+- **input hw_clk**: Hardware oscillator input.
+- **output led_red, led_green, led_blue**: Outputs to control RGB LED.
+- **output testwire**: Test output.
 
-The folder structure for this project is organized as follows:
+### Key Components in Code:
+- **SB_HFOSC**: Instantiates a high-frequency internal oscillator (~48 MHz).
+- **counter**: 26-bit counter that increments on each rising clock edge.
 
+### LED logic:
+```verilog
+assign led_blue = counter[25]; // Blinks blue LED based on MSB
+assign led_red = 0;
+assign led_green = 0;
+Only the blue LED blinks. Red and green are off.
 
-- `Makefile`: Automates the build and programming process for the FPGA.
-- `README.md`: Contains details about the project, setup instructions, and requirements.
-- `.pcf` files: Pin configuration files for setting up the FPGA board.
-- `.v` files: Verilog HDL code for controlling the LED.
+📁 Step 2: PCF File and Pin Mapping
+GitHub Link to PCF File:
+PCF File on GitHub
 
-## Features
+Pin Assignments:
 
-- **LED Control via FPGA**: The main functionality involves controlling an LED on the FPGA board through Verilog code.
-- **PCF File**: Used for configuring pin assignments on the FPGA board.
-- **Makefile**: Used for automating the process of building and programming the FPGA with the correct files.
+Signal	FPGA Pin
+led_red	39
+led_blue	40
+led_green	41
+hw_clk	20
+testwire	17
+These pins correspond to the RGB LED and oscillator clock input as per the VSDSquadron FPGA Mini board's datasheet.
 
-## Tools Used
+🛠 Step 3: Toolchain and Flashing
+Required Tools Installed:
+yosys: Synthesizes the Verilog code.
 
-- **VSDSquadron FPGA Mini**: The FPGA board used for this project.
-- **Verilog**: Hardware Description Language for coding the LED control logic.
-- **Xilinx ISE** or **Vivado**: FPGA design tools for synthesizing and programming the FPGA.
-- **Make**: Utility for automating the build process and compiling Verilog code.
+nextpnr-ice40: Places and routes design.
 
-## Requirements
+icepack, icetime: Converts to binary and checks timing.
 
-- **VSDSquadron FPGA Mini** board
-- **Verilog** development environment
-- **Xilinx ISE** or **Vivado** for FPGA synthesis and programming
-- **Make** utility for automation
+iceprog: Flashes .bin file to the FPGA board.
 
-## Setup Instructions
+Build & Flash Commands:
+bash
+Copy
+Edit
+make clean
+make build
+sudo make flash
+Outcome:
+Blue LED blinks visibly.
 
-### Step 1: Clone the Repository
+Timing report: 6.29 ns (159.10 MHz estimate).
 
-Clone this repository to your local machine:
+Flashing was successful once FTDI USB connection was detected and VM USB passthrough was set correctly.
 
-```bash
-git clone https://github.com/vinaysubramanya/fpga-task1.git
-Contact Information
+💡 Observations
+Blinking pattern is based on counter[25], which toggles approximately once every 0.67 seconds (assuming ~48MHz clock).
+
+The FPGA internal oscillator was successfully utilized without requiring external clocks.
+
+testwire can be used for debugging or scope probing.
+
+📂 Final Files
+top.v: Verilog source file.
+
+VSDSquadronFM.pcf: Physical constraints file.
+
+Makefile: Build and flashing automation.
+
+📬 Contact Information
 Author: Vinay Subramanya CK
 
 Email: wompert08@gmail.com
 
-License
-License
+📝 License
 This project is licensed under the MIT License - see the LICENSE file for details.
-
 
 
