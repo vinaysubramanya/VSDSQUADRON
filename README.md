@@ -1,14 +1,14 @@
 # 🔧 Verilog Implementation Report: Blue LED Blinking on VSDSquadron FPGA Mini
 
-## 📌 Objective
+##  Objective
 
 To understand, document, and implement Verilog code that drives the **blue LED** on the **VSDSquadron FPGA Mini** using the **internal oscillator**, a **frequency counter**, and appropriate **pin mappings via a PCF file**.
 
-## 🔍 Step 1: Understanding the Verilog Code
+##  Step 1: Understanding the Verilog Code
 
 **🔗 GitHub Code**: [top.v - Verilog Code on GitHub](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/top.v)
 
-### 🔧 Module Ports
+###  Module Ports
 
 - input hw_clk: Hardware oscillator input  
 
@@ -16,12 +16,12 @@ To understand, document, and implement Verilog code that drives the **blue LED**
 
 - output testwire: Debug/test output
 
-### ⚙️ Key Components
+###  Key Components
 
 - SB_HFOSC: Instantiates a high-frequency internal oscillator (~48 MHz)
 - counter: 26-bit counter increments with every clock pulse
 
-### 💡 LED Logic
+###  LED Logic
 
 assign led_blue = counter\[25\]; // Blinks blue LED based on MSB  
 assign led_red = 0; // Red LED is always off  
@@ -29,11 +29,11 @@ assign led_green = 0; // Green LED is always off
 
 Only the **blue LED** blinks. Red and green are **permanently off**.
 
-## 📁 Step 2: PCF File and Pin Mapping
+##  Step 2: PCF File and Pin Mapping
 
 **🔗 PCF File**: [VSDSquadronFM.pcf on GitHub](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/VSDSquadronFM.pcf)
 
-### 📌 Pin Assignments
+###  Pin Assignments
 
 | Signal | FPGA Pin |
 | --- | --- |
@@ -45,16 +45,16 @@ Only the **blue LED** blinks. Red and green are **permanently off**.
 
 These mappings align with the **VSDSquadron FPGA Mini** board specifications.
 
-## 🛠 Step 3: Toolchain and Flashing
+##  Step 3: Toolchain and Flashing
 
-### ✅ Required Tools Installed
+###  Required Tools Installed
 
 - yosys: Synthesizes the Verilog code
 - nextpnr-ice40: Places and routes design
 - icepack, icetime: Converts to binary and performs timing analysis
 - iceprog: Flashes the .bin file to the FPGA board
 
-### 🧪 Build & Flash Commands
+###  Build & Flash Commands
 
 make clean  
 make build  
@@ -62,7 +62,7 @@ sudo make flash
 
 Ensure: - FTDI USB connection is detected - USB passthrough is enabled for VMs
 
-### ⚡ Outcome
+###  Outcome
 
 - **Blue LED blinks** visibly on the board  
 
@@ -70,7 +70,7 @@ Ensure: - FTDI USB connection is detected - USB passthrough is enabled for VMs
 
 - Internal oscillator was used — no external crystal required
 
-### ⏱ Blinking Rate Estimate
+###  Blinking Rate Estimate
 
 Given a ~48 MHz clock:
 
@@ -78,7 +78,7 @@ T = 2^25 / 48,000,000 ≈ 0.67 seconds
 
 Thus, the **blue LED toggles once every ~0.67s**.
 
-## 📂 Final Files
+##  Final Files
 
 | File Name | Description |
 | --- | --- |
@@ -88,9 +88,9 @@ Thus, the **blue LED toggles once every ~0.67s**.
 
 ## 📽 Project Demonstration
 
-▶️ [**Watch Demo Video on Google Drive**](https://drive.google.com/file/d/1cJLVLQlBpZLIonIlUY4IMrYrCsXqNkw2/view?usp=drive_link)
+ [**Watch Demo Video on Google Drive**](https://drive.google.com/file/d/1cJLVLQlBpZLIonIlUY4IMrYrCsXqNkw2/view?usp=drive_link)
 
-## 📬 Contact Information
+##  Contact Information
 
 - **Author**: Vinay Subramanya CK  
 
