@@ -86,11 +86,11 @@ Thus, the **blue LED toggles once every ~0.67s**.
 | VSDSquadronFM.pcf | Physical Constraints File (PCF) |
 | Makefile | Automates build & flashing process |
 
-## 📽 Project Demonstration
+##  Project Demonstration
 
  [**Watch Demo Video on Google Drive**](https://drive.google.com/file/d/1cJLVLQlBpZLIonIlUY4IMrYrCsXqNkw2/view?usp=drive_link)
 
-##  Contact Information
+## Contact Information
 
 - **Author**: Vinay Subramanya CK  
 
