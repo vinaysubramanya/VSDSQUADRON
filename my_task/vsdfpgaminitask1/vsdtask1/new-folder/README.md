@@ -6,7 +6,7 @@ To understand, document, and implement Verilog code that drives the **blue LED**
 
 ##  Step 1: Understanding the Verilog Code
 
-**🔗 GitHub Code**: [top.v - Verilog Code on GitHub](https://github.com/thesourcerer8/VSDSquadron_FM/blob/main/led_blue/top.v)
+**🔗 GitHub Code**: [top.v - Verilog Code on GitHub](https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/my_task/vsdfpgaminitask1/vsdtask1/new-folder/top.v)
 
 ###  Module Ports
 
