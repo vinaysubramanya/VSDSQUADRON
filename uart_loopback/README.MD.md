@@ -263,7 +263,7 @@ Uploads the bitstream to the FPGA.
 ### **UART Loopback Testing**
 Open Serial Terminal
 ```bash
-sudo picocom -b 9600 /dev/ttyUSB0 --echo
+sudo minicocom -b 9600 /dev/ttyUSB0 --echo
 ```
  Send Data & Verify Output
 
