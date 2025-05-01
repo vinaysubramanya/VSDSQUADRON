@@ -6,7 +6,7 @@ It is designed for an **FPGA (Field Programmable Gate Array)** and implements a 
 
 This module enables **serial communication via UART** and **controls RGB LEDs based on UART signals**.
 
----
+----
 
 ## **Port Analysis**
 The first section of the code specifies the **ports** of the FPGA board.
