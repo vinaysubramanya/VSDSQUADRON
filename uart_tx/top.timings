@@ -1,0 +1,67 @@
+
+icetime topological timing analysis report
+==========================================
+
+Report for critical path:
+-------------------------
+
+        lc40_3_26_7 (LogicCell40) [clk] -> lcout: 1.491 ns
+     1.491 ns net_14352 (DanUART.bits_sent[0])
+        t170 (LocalMux) I -> O: 1.099 ns
+        inmux_2_27_14524_14556 (InMux) I -> O: 0.662 ns
+        t29 (CascadeMux) I -> O: 0.000 ns
+        lc40_2_27_2 (LogicCell40) in2 -> lcout: 1.205 ns
+     4.457 ns net_10538 (DanUART.bits_sent_SB_DFFESR_Q_7_D[0])
+        t148 (LocalMux) I -> O: 1.099 ns
+        inmux_1_28_10726_10759 (InMux) I -> O: 0.662 ns
+        t21 (CascadeMux) I -> O: 0.000 ns
+        lc40_1_28_0 (LogicCell40) in2 -> carryout: 0.609 ns
+     6.828 ns t5
+        lc40_1_28_1 (LogicCell40) carryin -> carryout: 0.278 ns
+     7.106 ns t6
+        lc40_1_28_2 (LogicCell40) carryin -> carryout: 0.278 ns
+     7.384 ns t7
+        lc40_1_28_3 (LogicCell40) carryin -> carryout: 0.278 ns
+     7.663 ns t8
+        lc40_1_28_4 (LogicCell40) carryin -> carryout: 0.278 ns
+     7.941 ns t9
+        lc40_1_28_5 (LogicCell40) carryin -> carryout: 0.278 ns
+     8.219 ns t10
+        lc40_1_28_6 (LogicCell40) carryin -> carryout: 0.278 ns
+     8.497 ns t11
+        lc40_1_28_7 (LogicCell40) carryin -> carryout: 0.278 ns
+     8.775 ns net_10798 ($nextpnr_ICESTORM_LC_1$I3)
+        t12 (ICE_CARRY_IN_MUX) carryinitin -> carryinitout: 0.556 ns
+        inmux_1_29_10866_10907 (InMux) I -> O: 0.662 ns
+        lc40_1_29_0 (LogicCell40) in3 -> lcout: 0.874 ns
+    10.868 ns net_6053 (DanUART.bits_sent_SB_DFFESR_Q_E[1])
+        odrv_1_29_6053_6357 (Odrv4) I -> O: 0.649 ns
+        t141 (Span4Mux_v1) I -> O: 0.344 ns
+        t140 (LocalMux) I -> O: 1.099 ns
+        inmux_3_28_18468_18523 (InMux) I -> O: 0.662 ns
+        lc40_3_28_4 (LogicCell40) in3 -> lcout: 0.874 ns
+    14.497 ns net_14595 (DanUART.buf_tx_SB_DFFESR_Q_5_R_SB_LUT4_O_I2_SB_LUT4_I2_O[1])
+        t179 (LocalMux) I -> O: 1.099 ns
+        inmux_2_27_14537_14562 (InMux) I -> O: 0.662 ns
+        t30 (CascadeMux) I -> O: 0.000 ns
+        lc40_2_27_3 (LogicCell40) in2 -> lcout: 1.205 ns
+    17.464 ns net_10539 (DanUART.buf_tx_SB_DFFESS_Q_E)
+        odrv_2_27_10539_13494 (Odrv12) I -> O: 1.232 ns
+        t154 (LocalMux) I -> O: 1.099 ns
+        inmux_2_29_14773_14834 (CEMux) I -> O: 0.702 ns
+    20.497 ns net_14834 (DanUART.buf_tx_SB_DFFESS_Q_E)
+        lc40_2_29_6 (LogicCell40) ce [setup]: 0.000 ns
+    20.497 ns net_10836 (DanUART.buf_tx[5])
+
+Resolvable net names on path:
+     1.491 ns ..  3.252 ns DanUART.bits_sent[0]
+     4.457 ns ..  6.219 ns DanUART.bits_sent_SB_DFFESR_Q_7_D[0]
+     8.775 ns ..  9.994 ns $nextpnr_ICESTORM_LC_1$I3
+    10.868 ns .. 13.623 ns DanUART.bits_sent_SB_DFFESR_Q_E[1]
+    14.497 ns .. 16.258 ns DanUART.buf_tx_SB_DFFESR_Q_5_R_SB_LUT4_O_I2_SB_LUT4_I2_O[1]
+    17.464 ns .. 20.497 ns DanUART.buf_tx_SB_DFFESS_Q_E
+                  lcout -> DanUART.buf_tx[5]
+
+Total number of logic levels: 13
+Total path delay: 20.50 ns (48.79 MHz)
+
