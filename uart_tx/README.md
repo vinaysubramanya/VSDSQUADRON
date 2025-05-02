@@ -108,11 +108,11 @@ In this block diagram:
 You can observe the data transmission and verify it using a terminal emulator (such as PuTTY or minicom) by connecting the FPGA’s UART TX pin to the computer's serial port and monitoring the output.
 
 ---
-## 📽️ Demo Video
+##  Demo Video
 
 You can watch the working demo of the UART Transmit Module in the following video:
 
-👉 [Watch on Google Drive](https://drive.google.com/file/d/1cDMsikjzdnfnlmxQdxnY9RZjrTezvj9C/view?usp=drive_link)
+ [Watch on Google Drive](https://drive.google.com/file/d/1cDMsikjzdnfnlmxQdxnY9RZjrTezvj9C/view?usp=drive_link)
 
 
 
