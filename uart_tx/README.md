@@ -62,7 +62,7 @@ The `uart_tx_8n1` module implements a simple UART transmitter with a finite stat
 
 ![Circuit Diagram](https://raw.githubusercontent.com/vinaysubramanya/VSDSQUADRON/main/uart_tx/ckt%20(1)%20(1).drawio.png)
 
-In this block diagram:
+In this circuit diagram:
 - The **12 MHz Oscillator** generates the primary clock.
 - The **Baud Rate Generator** derives the 9600 Hz baud clock.
 - The **uart_tx_8n1 Module** handles the 8N1 UART transmission.
