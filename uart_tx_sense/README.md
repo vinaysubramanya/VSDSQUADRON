@@ -82,6 +82,6 @@ sudo make terminal
 ##  Demo Video
 
    
- [Watch Demo](https://drive.google.com/drive/folders/1wiExZofSONVrxfD1RS8G1oDFjH9SeGvS?usp=sharing)
+ [Watch Demo](https://drive.google.com/file/d/1Va9m0Ph3c5LruW6TbAxQjprSipHgXmQI/view?usp=drive_link)
 
 
