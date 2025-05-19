@@ -30,23 +30,21 @@ The current implementation controls **two RGB LEDs** using the commands:
 ## System Requirements
 
 ### Hardware
-- [x] **VSDSquadron FPGA Mini**
-- [x] **Two RGB LEDs** (common cathode or anode)
-- [x] **Resistors (220Ω recommended)**
-- [x] USB to UART module (if UART over USB not directly supported)
+- VSDSquadron FPGA Mini
+- Two RGB LEDs (common cathode or anode)
+- Resistors (220Ω recommended)
+- USB to UART module (if UART over USB not directly supported)
 
 ### Software
-- [x] **Verilog HDL**
-- [x] **openFPGALoader** or equivalent for programming
-- [x] **Serial Terminal** (e.g., `minicom`, `PuTTY`, or `CoolTerm`)
+- Verilog HDL
+- openFPGALoader or equivalent for programming
+- Serial Terminal (e.g., `minicom`, `PuTTY`, or `CoolTerm`)
 
 ---
 
-##  System Architecture
+## System Architecture (Block Diagram)
 
-```
-https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/BLOCKDIAGRAM%20(2).png
-```
+![Block Diagram](https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/BLOCKDIAGRAM%20(2).png)
 
 ---
 
@@ -55,21 +53,30 @@ https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/BLOCKDIAGRA
 | Command | RGB1 State | RGB2 State |
 |---------|------------|------------|
 | `'r'`   | Red        | Red        |
-| `'g'`   | Green      | Green      |
-| `'b'`   | Blue       | Blue       |
+| `'g'`   | Green      | Blue       |
+| `'b'`   | Blue       | Red        |
 
-Ensure the character is **sent as ASCII** (e.g., not raw hex).
+*Ensure the character is sent as ASCII (not raw hex).
+
+---
+
+## Circuit Diagram
+
+![Circuit Diagram](https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/RGB.jpg)
+
+> Note: VCC and GND connections are shown clearly for both the FPGA and the RGB LEDs.
 
 ---
 
 ## Implementation Details
 
-- Uses a **custom UART RX** implementation in Verilog.
-- Internal clock of **12 MHz** configured via `SB_HFOSC`.
+- Custom UART RX implementation in Verilog.
+- Internal clock of 12 MHz configured via `SB_HFOSC`.
 - RX state machine decodes each UART byte and sets LED states.
-- LED control logic is synchronous with internal clock.
+- LED control logic is synchronous with the internal clock.
 
-### Example Verilog Snippet:
+### Example Verilog Snippet
+
 ```verilog
 if (rx_data == "r") begin
   rgb_red      <= 1;
@@ -95,22 +102,22 @@ end
 
 - Extend to more actuators like motors or relays.
 - Add UART TX for feedback.
-- Implement command sequences or multiple byte protocols.
+- Implement command sequences or multi-byte protocols.
 
 ---
 
 ## Usage Instructions
 
 1. Flash the bitstream onto the FPGA.
-2. Open a serial terminal at **115200 baud, 8N1**.
+2. Open a serial terminal at 115200 baud, 8N1.
 3. Send ASCII characters: `'r'`, `'g'`, `'b'`.
-4. Observe RGB LEDs changing color based on command.
+4. Observe RGB LEDs changing color based on the command.
 
 ---
 
 ## Demo
 
-[ Click to Watch the Demo Video](https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/RGBTASK5.mp4)
+[Click to Watch the Demo Video](https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/RGBTASK5.mp4)
 
 ---
 
