@@ -39,6 +39,7 @@ The current implementation controls **two RGB LEDs** using the commands:
 - Verilog HDL
 - icestorm
 - Serial Terminal ( `minicom')
+- yosys (to synthesize)
 
 ---
 
