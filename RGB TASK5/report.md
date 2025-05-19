@@ -123,7 +123,7 @@ end
 
 ## 📸 Demo
 
-*Insert photo or video of working hardware here*
+(https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/RGBTASK5.mp4)
 
 ---
 
