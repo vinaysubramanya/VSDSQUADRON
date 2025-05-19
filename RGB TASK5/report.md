@@ -37,8 +37,8 @@ The current implementation controls **two RGB LEDs** using the commands:
 
 ### Software
 - Verilog HDL
-- openFPGALoader or equivalent for programming
-- Serial Terminal (e.g., `minicom`, `PuTTY`, or `CoolTerm`)
+- icestorm
+- Serial Terminal ( `minicom')
 
 ---
 
