@@ -1,0 +1,9 @@
+set_io rgb1_red 37
+set_io rgb1_green 36
+set_io rgb1_blue 35
+
+set_io rgb2_red 4
+set_io rgb2_green 3
+set_io rgb2_blue 2
+
+set_io uart_rx 15
