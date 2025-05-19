@@ -103,22 +103,6 @@ end
 
 ---
 
-## 📁 Repository Structure
-
-```
-├── src/
-│   └── top.v               # Main Verilog module
-├── constraints/
-│   └── top.pcf        # Pin constraint file
-├── build/
-│   └── Bitstream files
-├── docs/
-│   └── system_diagram.png  # Architecture diagrams
-├── README.md               # Project documentation
-└── LICENSE
-```
-
----
 
 ## 🧠 Future Improvements
 
