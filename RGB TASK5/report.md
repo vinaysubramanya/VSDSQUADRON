@@ -45,17 +45,7 @@ The current implementation controls **two RGB LEDs** using the commands:
 ##  System Architecture
 
 ```
-+------------------+
-| Serial Terminal  |
-|   (e.g., PC)     |
-+--------+---------+
-        |
-        | UART (115200 baud)
-        |
-+--------v---------+       +--------------------+
-|  FPGA (VSDSquad) |<----->|  RGB LEDs (2x)     |
-|                  |       |  (controlled pins) |
-+------------------+       +--------------------+
+https://github.com/vinaysubramanya/VSDSQUADRON/blob/main/RGB%20TASK5/BLOCKDIAGRAM%20(2).png
 ```
 
 ---
