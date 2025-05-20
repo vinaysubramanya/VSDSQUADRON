@@ -98,7 +98,7 @@ module top (
     end
   end
 
-  assign rgb1_red   = gb_red;
+  assign rgb1_red   = rgb_red;
   assign rgb1_green = rgb_green;
   assign rgb1_blue  = rgb_blue;
 
