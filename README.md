@@ -1,6 +1,6 @@
 # VSDSQUADRON
 
-This repository contains a collection of projects and experiments developed for the VSDSquadron FPGA Mini,
+This repository contains a collection of projects and experiments developed for the VSDSquadron FPGA Mini.
 The projects demonstrate various functionalities such as LED control and UART communication.
 
 ## Repository Structure
@@ -38,11 +38,11 @@ To explore and run the projects:
 - VSDSquadron Mini development board
 - Serial communication tool (e.g., minicom, screen)
 
-
 ## AUTHOR
 
-VINAY SUBRAMANYA CK
-
+VINAY SUBRAMANYA CK  
+Email: wompert08@gmail.com  
+LinkedIn: [vinay-subramanya-c-k](https://www.linkedin.com/in/vinay-subramanya-c-k-ab0a0b241/)
 
 ## License
 
