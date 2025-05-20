@@ -79,7 +79,7 @@ module top (
         rgb2_green_r <= 1;
         rgb2_blue_r  <= 1;
       end else if (rx_data == "g") begin
-        // rgb1 green, rgb2 blue
+        // rgb1 green, rgb2 green
         rgb_red    <= 1;
         rgb_green  <= 0;
         rgb_blue   <= 1;
@@ -87,7 +87,7 @@ module top (
         rgb2_green_r <= 0;
         rgb2_blue_r  <= 1;
       end else if (rx_data == "b") begin
-        // rgb1 blue, rgb2 red
+        // rgb1 blue, rgb2 blue
         rgb_red    <= 1;
         rgb_green  <= 1;
         rgb_blue   <= 0;
