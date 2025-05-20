@@ -35,9 +35,6 @@ To explore and run the projects:
    Use appropriate flashing tools compatible with the VSDSquadron Mini to upload the compiled firmware.
 
 ## Prerequisites
-
-- 
-- 
 - VSDSquadron Mini development board
 - Serial communication tool (e.g., minicom, screen)
 
