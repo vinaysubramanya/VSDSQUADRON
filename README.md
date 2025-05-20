@@ -1,6 +1,6 @@
 # VSDSQUADRON
 
-This repository contains a collection of projects and experiments developed for the VSDSquadron Mini, a RISC-V-based development board.
+This repository contains a collection of projects and experiments developed for the VSDSquadron FPGA Mini,
 The projects demonstrate various functionalities such as LED control and UART communication.
 
 ## Repository Structure
