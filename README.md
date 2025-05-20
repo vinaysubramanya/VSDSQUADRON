@@ -42,7 +42,7 @@ To explore and run the projects:
 ## AUTHOR
 
 VINAY SUBRAMANYA CK
-EMAIL:-wompert08@gmail.com
+
 
 ## License
 
